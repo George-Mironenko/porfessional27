@@ -1,0 +1,140 @@
+# ==============================================================================
+# DATA & STORAGE (Датасеты и хранилища)
+# ==============================================================================
+# Никогда не пушьте сырые, обработанные или временные данные в Git
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.xml
+*.parquet
+*.avro
+*.orc
+*.db
+*.sqlite
+*.sqlite3
+*.h5
+*.hd5
+*.pkl
+*.pickle
+*.xlsx
+*.xls
+
+# Исключение: можно разрешить мелкие конфигурационные JSON, если они нужны
+# !config.json
+
+# Локальные папки с данными
+data/
+data_raw/
+data_processed/
+datasets/
+dumps/
+downloads/
+contest_bi_analyst_participant_final/
+contest_bi_analyst_participant_preparsed/
+c:\Users\user\OneDrive\Desktop\pro27\contest_bi_analyst_participant_final
+
+# ==============================================================================
+# CREDENTIALS & SECRETS (Пароли, ключи доступа и конфиги)
+# ==============================================================================
+# Файлы окружения (содержат пароли к БД, API-ключи, токены)
+.env
+.env.local
+.env.*
+*.env
+
+# Ключи облачных провайдеров (AWS, GCP, Azure, Yandex Cloud)
+*.pem
+*.pkcs12
+*.pfx
+*.p12
+*.key
+credentials
+.aws/
+.gcloud/
+*secret*.json
+*creds*.json
+
+# ==============================================================================
+# DATA ENGINEERING TOOLS (Специфичный софт для DE)
+# ==============================================================================
+# Airflow / Dagster / Prefect
+**/airflow/logs/
+**/airflow/airflow.db
+**/airflow/airflow.cfg
+**/airflow/webserver_config.py
+.prefect/
+
+# dbt (Data Build Tool)
+logs/
+target/
+dbt_modules/
+dbt_packages/
+
+# Spark / Hadoop / Hive
+derby.log
+metastore_db/
+spark-warehouse/
+.spark-stubs/
+jars/
+
+# Docker (если внутри контейнеров создаются локальные разделы с данными)
+.docker/
+**/volumes/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+# Если не хотите пушить промежуточные тяжелые графики в чекпоинтах:
+*.ipynb_checkpoints
+
+# ==============================================================================
+# PYTHON & ENVIRONMENTS (Виртуальные окружения и кэш)
+# ==============================================================================
+# Базовый Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+ENV/
+.env/
+bin/
+lib/
+include/
+share/
+
+# Poetry, Pipenv, Conda
+.poetry/
+.pipenv/
+.conda/
+
+# Logs (Логи выполнения скриптов)
+*.log
+logs/
+
+# ==============================================================================
+# OS & IDE (Системный мусор)
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE (VS Code, PyCharm)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
